@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приглашение на свадьбу | Иван & Мария</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <p class="subtitle">Приглашаем вас на нашу свадьбу</p>
+      <h1>Иван & Мария</h1>
+      <p class="date">15 августа 2026 • 16:00</p>
+      <a href="#rsvp" class="btn">Подтвердить присутствие</a>
+    </div>
+  </header>
+
+  <!-- Программа -->
+  <section class="program" id="program">
+    <div class="container">
+      <h2>Программа дня</h2>
+      <div class="timeline">
+        <div class="item"><span class="time">16:00</span><span class="event">Сбор гостей & Фуршет</span></div>
+        <div class="item"><span class="time">17:00</span><span class="event">Церемония регистрации</span></div>
+        <div class="item"><span class="time">18:00</span><span class="event">Банкет & Развлечения</span></div>
+        <div class="item"><span class="time">23:00</span><span class="event">Завершение вечера</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Дресс-код -->
+  <section class="dress-code" id="dress-code">
+    <div class="container">
+      <h2>Дресс-код</h2>
+      <div class="dress-grid">
+        <div class="dress-item">
+          <div class="dress-icon" aria-hidden="true">👗</div>
+          <p class="dress-label">Элегантный вечерний стиль</p>
+        </div>
+        <div class="dress-item">
+          <div class="dress-icon" aria-hidden="true">🤵</div>
+          <p class="dress-label">Классический костюм</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Место -->
+  <section class="location" id="location">
+    <div class="container">
+      <h2>Место проведения</h2>
+      <p class="venue">Усадьба «Белые Росы»</p>
+      <p class="address">Московская обл., г. Истра, ул. Лесная, 12</p>
+      <a href="https://yandex.ru/maps/" target="_blank" class="link">Открыть на карте →</a>
+    </div>
+  </section>
+
+  <!-- RSVP Форма -->
+  <section class="rsvp" id="rsvp">
+    <div class="container">
+      <h2>Подтвердите присутствие</h2>
+      <!-- Замените action на свой эндпоинт Formspree -->
+      <form id="rsvp-form" action="https://formspree.io/f/ВАШ_ID" method="POST">
+        <div class="form-group">
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="name" required placeholder="Иван Петров">
+        </div>
+        <div class="form-group">
+          <label>Присутствие</label>
+          <div class="radio-group">
+            <label><input type="radio" name="attendance" value="Приду" required> Приду</label>
+            <label><input type="radio" name="attendance" value="Не приду"> К сожалению, не смогу</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="menu">Предпочтения в меню</label>
+          <select id="menu" name="menu">
+            <option value="Мясо">Мясо</option>
+            <option value="Рыба">Рыба</option>
+            <option value="Вегетарианское">Вегетарианское</option>
+            <option value="Детское">Детское</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+      <p class="success-msg" style="display:none;">Спасибо! Мы получили ваш ответ 💌</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Иван & Мария. Ждем вас!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
